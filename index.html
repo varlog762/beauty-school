@@ -5,12 +5,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="src/style.css">
-  <title>Vite App</title>
+  <title>KOSHKA</title>
 </head>
 
 <body>
-  <div id="app">
-    <h1 class="text-teal-300">Hello world</h1>
+  <div class="min-h-screen bg-white">
+    <!-- About the School Section  -->
+    <section class="relative flex h-[500px] md:h-[800px] w-full flex-col items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <Image src="/placeholder.svg?height=800&width=1600" alt="Beauty School Background" fill
+          class="object-cover opacity-40" priority />
+        <div class="absolute inset-0 bg-gradient-to-b from-pink-100/70 to-white/90"></div>
+      </div>
+      <div class="z-10 flex max-w-4xl flex-col items-center justify-center space-y-6 px-4 text-center">
+        <!-- Logo -->
+        <div class="text-amber-400">
+          <h1 class="font-serif text-4xl font-bold tracking-tight  sm:text-5xl md:text-6xl">
+            KOSHKA
+          </h1>
+          <p>центр профессионального развития</p>
+          <div class="h-0.5 w-l bg-amber-400"></div>
+          <p>студия красоты</p>
+        </div>
+
+        <p class="max-w-2xl text-lg text-pink-950 md:text-xl">
+          Раскройте свой потенциал и превратите свою страсть к красоте в успешную карьеру. Наши опытные преподаватели и
+          современные учебные помещения создают идеальные условия для обучения, практики и совершенствования вашего
+          мастерства.
+        </p>
+        <a href="#registration"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground h-10 px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white cursor-pointer">
+          Записаться</a>
+      </div>
+    </section>
+
+    <!-- Our Courses Section -->
+    <section class="bg-gradient-to-b from-white to-pink-50 py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="mb-12 text-center font-serif text-3xl font-bold text-pink-800 md:text-4xl">Наши курсы:</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div
+            class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div class="relative h-48 w-full overflow-hidden">
+              <img alt="Course 1" loading="lazy" decoding="async" data-nimg="fill"
+                class="object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/placeholder.svg?height=400&amp;width=600"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+              <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 font-serif text-xl font-bold text-white">Course 1</h3>
+            </div>
+            <div class="p-4">
+              <p class="text-pink-700">Master the art of hairstyling and coloring techniques.</p>
+              <button
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 underline-offset-4 hover:underline h-10 mt-2 p-0 text-pink-600 hover:text-pink-800">Learn
+                more →</button>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div class="relative h-48 w-full overflow-hidden">
+              <img alt="Course 1" loading="lazy" decoding="async" data-nimg="fill"
+                class="object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/placeholder.svg?height=400&amp;width=600"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+              <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 font-serif text-xl font-bold text-white">Course 1</h3>
+            </div>
+            <div class="p-4">
+              <p class="text-pink-700">Master the art of hairstyling and coloring techniques.</p>
+              <button
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 underline-offset-4 hover:underline h-10 mt-2 p-0 text-pink-600 hover:text-pink-800">Learn
+                more →</button>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border bg-card text-card-foreground shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div class="relative h-48 w-full overflow-hidden">
+              <img alt="Course 1" loading="lazy" decoding="async" data-nimg="fill"
+                class="object-cover transition-transform duration-300 group-hover:scale-105"
+                src="/placeholder.svg?height=400&amp;width=600"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+              <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 to-transparent"></div>
+              <h3 class="absolute bottom-4 left-4 font-serif text-xl font-bold text-white">Course 1</h3>
+            </div>
+            <div class="p-4">
+              <p class="text-pink-700">Master the art of hairstyling and coloring techniques.</p>
+              <button
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 underline-offset-4 hover:underline h-10 mt-2 p-0 text-pink-600 hover:text-pink-800">Learn
+                more →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="bg-white py-16" id="registration">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-md rounded-lg bg-pink-50 p-8 shadow-md">
+          <h2 class="mb-6 text-center font-serif text-2xl font-bold text-pink-800">Записаться на курс</h2>
+          <form class="space-y-6">
+            <div class="space-y-2">
+              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="course">Select a Course</label>
+              <button type="button" role="combobox" aria-controls="radix-«r0»" aria-expanded="false"
+                aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder=""
+                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"
+                id="course"><span style="pointer-events: none;">Select a course</span><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg></button>
+              <select aria-hidden="true" tabindex="-1"
+                style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                <option value=""></option>
+                <option value="course1">Course 1</option>
+                <option value="course2">Course 2</option>
+                <option value="course3">Course 3</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="name">Имя</label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="name" placeholder="Введите ваше имя">
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="phone">Телефон</label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="phone" placeholder="Введите номер телефона">
+            </div>
+            <button
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Sign
+              Up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-pink-100 py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+          <div class="flex items-center space-x-2 text-pink-800">
+            +1 (555) 123-4567
+          </div>
+          <div class="text-center md:text-left">
+            <p class="text-sm text-pink-700">
+              © 2025 KOSHKA. Все права защищены.
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <Link href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
+            <Instagram size={20} />
+            <span class="sr-only">Instagram</span>
+            </Link>
+            <Link href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
+            <Send size={20} />
+            <span class="sr-only">Telegram</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
   <script type="module" src="/src/main.js"></script>
 </body>
