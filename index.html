@@ -104,44 +104,53 @@
       <div class="container mx-auto px-4">
         <div class="mx-auto max-w-md rounded-lg bg-pink-50 p-8 shadow-md">
           <h2 class="mb-6 text-center font-serif text-2xl font-bold text-pink-800">Записаться на курс</h2>
-          <form class="space-y-6">
-            <div class="space-y-2">
-              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="course">Select a Course</label>
-              <button type="button" role="combobox" aria-controls="radix-«r0»" aria-expanded="false"
-                aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder=""
-                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"
-                id="course"><span style="pointer-events: none;">Select a course</span><svg
-                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          <form class="space-y-6" id="registration-form" name="registration-form">
+
+            <div class="relative space-y-2">
+              <label class="text-sm font-medium leading-none" for="course">Название курса</label>
+
+              <button type="button" id="course-button"
+                class="flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ">
+                <span id="selected-course">Выберите курс</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true">
+                  class="lucide lucide-chevron-down h-4 w-4 opacity-50">
                   <path d="m6 9 6 6 6-6"></path>
-                </svg></button>
-              <select aria-hidden="true" tabindex="-1"
-                style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
+                </svg>
+              </button>
+
+              <ul id="dropdown-menu"
+                class="absolute left-0 top-full z-10 mt-1 w-full rounded-md border border-gray-300 bg-white shadow-md hidden">
+                <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="nails">Маникюр</li>
+                <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="brows">Брови</li>
+                <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="eyelashes">Ресницы</li>
+              </ul>
+
+              <select id="course-select" name="course" class="hidden" required>
                 <option value=""></option>
-                <option value="course1">Course 1</option>
-                <option value="course2">Course 2</option>
-                <option value="course3">Course 3</option>
+                <option value="nails">nails</option>
+                <option value="brows">brows</option>
+                <option value="eyelashes">eyelashes</option>
               </select>
             </div>
+
             <div class="space-y-2">
               <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="name">Имя</label>
-              <input
-                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                id="name" placeholder="Введите ваше имя">
+              <input id="name" name="name-input"
+                class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
+                placeholder="Введите ваше имя">
             </div>
             <div class="space-y-2">
               <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="phone">Телефон</label>
-              <input
-                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              <input id="phone" name="phone-input"
+                class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
                 id="phone" placeholder="Введите номер телефона">
             </div>
-            <button
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Sign
-              Up</button>
+            <button type="submit" name="submit-button" disabled
+              class="rounded-md text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Записаться
+              на курс</button>
           </form>
         </div>
       </div>
