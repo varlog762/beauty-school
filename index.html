@@ -107,9 +107,9 @@
           <form class="space-y-6" id="registration-form" name="registration-form">
 
             <div class="relative space-y-2">
-              <label class="text-sm font-medium leading-none" for="course">Название курса</label>
+              <label class="text-sm font-medium leading-none" for="course-select">Название курса</label>
 
-              <button type="button" id="course-button"
+              <button type="button" name="course-select-button"
                 class="flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ">
                 <span id="selected-course">Выберите курс</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -126,7 +126,7 @@
                 <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="eyelashes">Ресницы</li>
               </ul>
 
-              <select id="course-select" name="course" class="hidden" required>
+              <select id="course-select" name="course-select" class="hidden" required>
                 <option value=""></option>
                 <option value="nails">nails</option>
                 <option value="brows">brows</option>
@@ -146,7 +146,7 @@
                 for="phone">Телефон</label>
               <input id="phone" name="phone-input"
                 class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
-                id="phone" placeholder="Введите номер телефона">
+                placeholder="Введите номер телефона">
             </div>
             <button type="submit" name="submit-button" disabled
               class="rounded-md text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Записаться
