@@ -1,8 +1,14 @@
-import { checkForm } from './utils/index';
+import {
+  checkForm,
+  emitCustomEvent,
+  validateName,
+  validatePhone,
+} from './utils/index';
+
+const URL = import.meta.env.VITE_URL;
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.forms['registration-form'];
-  const formData = new FormData(form);
 
   const menu = document.getElementById('dropdown-menu');
   const selectedText = document.getElementById('selected-course');
@@ -33,26 +39,49 @@ document.addEventListener('DOMContentLoaded', () => {
       const value = item.dataset.value;
       selectedText.textContent = item.textContent;
       courseSelect.value = value;
-
-      const event = new Event('change');
-      courseSelect.dispatchEvent(event);
+      emitCustomEvent(courseSelect, 'change');
 
       menu.classList.add('hidden');
     });
   });
 
-  form.addEventListener('input', () =>
-    checkForm(nameInput, phoneInput, courseSelect, submitButton)
-  );
+  form.addEventListener('input', event => {
+    if (event.target === nameInput) {
+      validateName(nameInput);
+    }
 
-  courseSelect.addEventListener('change', () => {
-    console.log('changed!');
+    if (event.target === phoneInput) {
+      validatePhone(phoneInput);
+    }
+
     checkForm(nameInput, phoneInput, courseSelect, submitButton);
   });
 
-  form.addEventListener('submit', event => {
+  courseSelect.addEventListener('change', () => {
+    checkForm(nameInput, phoneInput, courseSelect, submitButton);
+  });
+
+  form.addEventListener('submit', async event => {
     event.preventDefault();
 
-    console.log(courseSelect.value, nameInput.value, phoneInput.value);
+    const formData = {
+      name: nameInput.value,
+      phone: phoneInput.value,
+      course: courseSelect.value,
+    };
+
+    const response = await fetch(URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+      redirect: 'follow', // Ключевой параметр
+      mode: 'no-cors',
+    });
+
+    const result = await response.json();
+    console.dir(result);
+    // if (result.status) {
+    //   alert('Заявка отправлена!');
+    // }
   });
 });

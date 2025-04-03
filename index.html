@@ -137,16 +137,20 @@
             <div class="space-y-2">
               <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="name">Имя</label>
-              <input id="name" name="name-input"
-                class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
-                placeholder="Введите ваше имя">
+              <div>
+                <input id="name" name="name-input" maxlength="40"
+                  class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
+                  placeholder="Введите ваше имя">
+              </div>
             </div>
             <div class="space-y-2">
               <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="phone">Телефон</label>
-              <input id="phone" name="phone-input"
-                class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
-                placeholder="Введите номер телефона">
+              <div class="mb-12">
+                <input type="tel" id="phone" name="phone-input"
+                  class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
+                  placeholder="Введите номер телефона">
+              </div>
             </div>
             <button type="submit" name="submit-button" disabled
               class="rounded-md text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Записаться
