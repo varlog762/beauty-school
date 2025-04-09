@@ -138,7 +138,7 @@
               <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 for="name">Имя</label>
               <div>
-                <input id="name" name="name-input" maxlength="40"
+                <input id="name" name="name-input" maxlength="50"
                   class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
                   placeholder="Введите ваше имя">
               </div>
@@ -152,7 +152,7 @@
                   placeholder="Введите номер телефона">
               </div>
             </div>
-            <button type="submit" name="submit-button" disabled
+            <button type="submit" name="submit-button"
               class="rounded-md text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Записаться
               на курс</button>
           </form>
@@ -173,39 +173,60 @@
             </p>
           </div>
           <div class="flex space-x-4">
-            <Link href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
-            <Instagram size={20} />
-            <span class="sr-only">Instagram</span>
-            </Link>
-            <Link href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
-            <Send size={20} />
-            <span class="sr-only">Telegram</span>
-            </Link>
+            <a href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+              </svg>
+            </a>
+            <a href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0" />
+                  </path>
+                  <path stroke-dasharray="24" stroke-dashoffset="24" d="M21 5l-19 7.5">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0" />
+                  </path>
+                  <path stroke-dasharray="14" stroke-dashoffset="14" d="M18.5 20l-9.5 -6.5">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="14;0" />
+                  </path>
+                  <path stroke-dasharray="10" stroke-dashoffset="10" d="M2 12.5l7 1">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="10;0" />
+                  </path>
+                  <path stroke-dasharray="8" stroke-dashoffset="8" d="M12 16l-3 3M9 13.5l0 5.5">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" values="8;0" />
+                  </path>
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </footer>
   </div>
 
-  <div class="fixed inset-0 z-50  items-center justify-center bg-black/30 p-4 hidden">
+  <div id="popup" class="flex fixed inset-0 z-50  items-center justify-center bg-black/60 p-4 hidden">
     <div class="relative w-full max-w-md animate-in fade-in zoom-in rounded-lg bg-white p-6 shadow-lg">
-      <Button variant="ghost" size="icon" class="absolute right-2 top-2 text-pink-800 hover:bg-pink-100"
-        onClick={closePopup}>
-        <X size={18} />
-        <span class="sr-only">Close</span>
-      </Button>
+      <!-- <button variant="ghost" size="icon" class="absolute right-2 top-2 text-pink-800 hover:bg-pink-100 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z" />
+        </svg>
+      </button> -->
       <div class="flex flex-col items-center justify-center space-y-4 text-center">
-        <div class="rounded-full bg-pink-100 p-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24"
+        <div class="rounded-full bg-green-100 p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-800" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-pink-800">Your order has been sent</h3>
-        <p class="text-pink-600">Thank you for registering! We'll contact you shortly.</p>
-        <Button class="mt-2 bg-pink-600 hover:bg-pink-700" onClick={closePopup}>
-          Close
-        </Button>
+        <h3 class="text-xl font-semibold text-green-500">Выша заявка принята!</h3>
+        <p class="text-pink-600">Спасибо за заявку! Наши сотрудники свяжутся с вами в ближайшее время.</p>
+        <button id="popup-close-button" type="button"
+          class="mt-2 bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md">
+          Закрыть
+        </button>
       </div>
     </div>
   </div>

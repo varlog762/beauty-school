@@ -18,6 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const phoneInput = form['phone-input'];
   const submitButton = form['submit-button'];
 
+  const popup = document.getElementById('popup');
+  const popupCloseButton = document.getElementById('popup-close-button');
+
+  const showPopup = () => {
+    document.body.classList.add('overflow-hidden');
+    popup.classList.remove('hidden');
+    popup.classList.add('flex');
+  };
+
+  const closePopup = () => {
+    document.body.classList.remove('overflow-hidden');
+    popup.classList.remove('flex');
+    popup.classList.add('hidden');
+  };
+
+  const resetForm = () => {
+    form.reset();
+    selectedText.textContent = 'Выберите курс';
+    submitButton.disabled = false;
+  };
+
   // Закрытие списка при клике вне его
   document.addEventListener('click', event => {
     if (
@@ -25,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
       !menu.contains(event.target)
     ) {
       menu.classList.add('hidden');
+    }
+
+    if (event.target === popup || event.target === popupCloseButton) {
+      closePopup();
     }
   });
 
@@ -45,25 +70,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  form.addEventListener('input', event => {
-    if (event.target === nameInput) {
-      validateName(nameInput);
-    }
+  // form.addEventListener('input', event => {
+  //   if (event.target === nameInput) {
+  //     validateName(nameInput);
+  //   }
 
-    if (event.target === phoneInput) {
-      validatePhone(phoneInput);
-    }
+  //   if (event.target === phoneInput) {
+  //     validatePhone(phoneInput);
+  //   }
 
-    checkForm(nameInput, phoneInput, courseSelect, submitButton);
-  });
+  //   checkForm(nameInput, phoneInput, courseSelect, submitButton);
+  // });
 
-  courseSelect.addEventListener('change', () => {
-    checkForm(nameInput, phoneInput, courseSelect, submitButton);
-  });
+  // courseSelect.addEventListener('change', () => {
+  //   checkForm(nameInput, phoneInput, courseSelect, submitButton);
+  // });
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
 
+    submitButton.disabled = true;
+
+    // const formData = new FormData(event.target);
     const formData = {
       name: nameInput.value,
       phone: phoneInput.value,
@@ -77,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const result = await response.json();
-    console.dir(result);
-    // if (result.status) {
-    //   alert('Заявка отправлена!');
-    // }
+    if (result.status === 'success') {
+      resetForm();
+      showPopup();
+    }
   });
 });
