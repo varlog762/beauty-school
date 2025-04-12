@@ -1,1 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+}
+
+:root {
+  --color-about-from: #f7eee7;
+  --color-about-to: #dfcfc6;
+  --color-courses: #f9eee8;
+  --color-third: #f3e1db;
+  --color-title: #754222;
+
+  --color-button: #d9a996;
+  --color-font-dark: #333333;
+
+  --color-test: rgba(176, 117, 77, 0.4);
+  --color-test2: #8e532f;
+
+  --color-brown-dark: #4a2625;
+  --color-brown-light: #6c5e53;
+}

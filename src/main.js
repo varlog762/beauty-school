@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const resetForm = () => {
     form.reset();
+    courseSelectButton.classList.add('text-gray-800/60');
     selectedText.textContent = 'Выберите курс';
     submitButton.disabled = false;
   };
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', () => {
       const value = item.dataset.value;
       selectedText.textContent = item.textContent;
+      courseSelectButton.classList.remove('text-gray-800/60');
       courseSelect.value = value;
       emitCustomEvent(courseSelect, 'change');
 

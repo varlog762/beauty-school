@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="src/style.css">
   <title>KOSHKA</title>
 </head>
@@ -11,48 +16,58 @@
 <body>
   <div class="min-h-screen bg-white">
     <!-- About the School Section  -->
-    <section class="relative flex h-[500px] md:h-[800px] w-full flex-col items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <!-- <Image src="/placeholder.svg?height=800&width=1600" alt="Beauty School Background" fill
-          class="object-cover opacity-40" priority /> -->
-        <div class="absolute inset-0 bg-gradient-to-b from-pink-100/70 to-white/90"></div>
-      </div>
-      <div class="z-10 flex max-w-4xl flex-col items-center justify-center space-y-6 px-4 text-center">
-        <!-- Logo -->
-        <div class="text-amber-400">
-          <h1 class="font-serif text-4xl font-bold tracking-tight  sm:text-5xl md:text-6xl">
-            KOSHKA
-          </h1>
-          <p>центр профессионального развития</p>
-          <div class="h-0.5 w-l bg-amber-400"></div>
-          <p>студия красоты</p>
+    <section
+      class="about relative flex h-[500px] md:h-[800px] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-[var(--color-about-from)] to-[var(--color-about-to)] font-inter">
+      <div class="container h-full mx-auto px-4 ">
+        <div class="flex w-full h-full items-center justify-between space-y-6 px-4 text-center">
+          <div class="about-description-wrapper text-left flex flex-col items-start">
+            <!-- Logo -->
+            <div class="logo mb-10 text-center">
+              <h1 class="font-serif text-4xl font-bold sm:text-5xl md:text-6xl">
+                KOSHKA
+              </h1>
+              <p>центр профессионального развития</p>
+              <div class="h-0.5 w-20 bg-black mx-auto"></div>
+              <p>студия красоты</p>
+            </div>
+            <!-- Description -->
+            <p
+              class="about-description max-w-2xl text-lg font-normal tracking-wider text-[var(--color-font-dark)] mb-10 md:text-xl/relaxed">
+              Раскройте свой потенциал и превратите свою страсть к красоте в успешную карьеру. Наши опытные
+              преподаватели
+              и
+              современные учебные помещения создают идеальные условия для обучения, практики и совершенствования вашего
+              мастерства.
+            </p>
+            <!-- Button -->
+            <a href="#registration"
+              class="rounded-md text-3xl uppercase transition-colors focus-visible:ring-2  px-5 py-3 bg-pink-600 hover:bg-pink-700 text-white tracking-wider shadow-sm">
+              Записаться</a>
+          </div>
+          <div class="about-img-wrapper w-1/2 h-full">
+            <img src="/about-img.png" alt="girl photo" class="h-full">
+          </div>
         </div>
-
-        <p class="max-w-2xl text-lg text-pink-950 md:text-xl">
-          Раскройте свой потенциал и превратите свою страсть к красоте в успешную карьеру. Наши опытные преподаватели и
-          современные учебные помещения создают идеальные условия для обучения, практики и совершенствования вашего
-          мастерства.
-        </p>
-        <a href="#registration"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground h-10 px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white cursor-pointer">
-          Записаться</a>
       </div>
     </section>
 
     <!-- Our Courses Section -->
-    <section class="bg-gradient-to-b from-white to-pink-50 py-16">
+    <section class=" bg-[var(--color-courses)] pt-16 pb-32 tracking-wider uppercase font-inter">
       <div class="container mx-auto px-4">
-        <h2 class="mb-12 text-center font-serif text-3xl font-bold text-pink-800 md:text-4xl">Наши курсы:</h2>
+
+        <!-- Title -->
+        <h2 class="mb-12 text-center text-3xl text-[var(--color-brown-light)] tracking-wider md:text-4xl">Наши курсы
+        </h2>
         <div class="grid gap-8 md:grid-cols-3">
 
           <!-- Card 1 -->
           <div
-            class="rounded-lg border border-gray-300 shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg">
+            class="rounded-lg border border-gray-300 shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer">
             <div class="relative h-full w-full overflow-hidden">
               <img alt="Маникюр" class="object-cover transition-transform duration-300 group-hover:scale-105"
                 src="/nails-card.jpg">
               <div class="absolute bottom-0 w-full h-1/4 bg-pink-300/40 flex items-center justify-center">
-                <h3 class="text-4xl text-white font-sans">Маникюр</h3>
+                <h3 class="text-3xl text-white font-sans">Маникюр</h3>
               </div>
             </div>
           </div>
@@ -60,11 +75,11 @@
           <!-- Card 2 -->
           <div
             class="rounded-lg border border-gray-300 shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <div class="relative h-full w-full overflow-hidden">
+            <div class="relative h-full w-full overflow-hidden cursor-pointer">
               <img alt="Маникюр" class="object-cover transition-transform duration-300 group-hover:scale-105"
                 src="/brows-card.jpg">
               <div class="absolute bottom-0 w-full h-1/4 bg-pink-300/40 flex items-center justify-center">
-                <h3 class="text-4xl text-white font-sans">Брови</h3>
+                <h3 class="text-3xl text-white font-sans">Брови</h3>
               </div>
             </div>
           </div>
@@ -72,11 +87,11 @@
           <!-- Card 3 -->
           <div
             class="rounded-lg border border-gray-300 shadow-sm group overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <div class="relative h-full w-full overflow-hidden">
+            <div class="relative h-full w-full overflow-hidden cursor-pointer">
               <img alt="Ресницы" class="object-cover transition-transform duration-300 group-hover:scale-105"
                 src="/eyelashes-card.jpg">
               <div class="absolute bottom-0 w-full h-1/4 bg-pink-300/40 flex items-center justify-center">
-                <h3 class="text-4xl text-white font-sans">Ресницы</h3>
+                <h3 class="text-3xl text-white font-sans">Ресницы</h3>
               </div>
             </div>
           </div>
@@ -86,27 +101,33 @@
     </section>
 
     <!-- Registration Form Section -->
-    <section class="bg-white py-16" id="registration">
+    <section class="bg-[var(--color-third)] font-inter py-16" id="registration">
       <div class="container mx-auto px-4">
-        <div class="mx-auto max-w-md rounded-lg bg-pink-50 p-8 shadow-md">
-          <h2 class="mb-6 text-center font-serif text-2xl font-bold text-pink-800">Записаться на курс</h2>
+
+        <!-- Header -->
+        <h2 class="mb-12 text-center text-3xl text-[var(--color-brown-light)] tracking-wider md:text-3xl uppercase">
+          Оставить заявку
+        </h2>
+
+        <!-- Form wrapper -->
+        <div class="mx-auto max-w-md rounded-lg bg-[var(--color-courses)] p-8 shadow-md text-l">
           <form class="space-y-6" id="registration-form" name="registration-form">
 
+            <!-- Course select -->
             <div class="relative space-y-2">
-              <label class="text-sm font-medium leading-none" for="course-select">Название курса</label>
-
+              <!-- <label class="text-sm font-medium leading-none" for="course-select">Название курса</label> -->
               <button type="button" name="course-select-button"
-                class="flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ">
+                class="flex h-[48px] w-full items-center justify-between rounded-md border border-[var(--color-third)] bg-[var(--color-third)] px-3 py-3 text-l text-gray-800/60 shadow-sm">
                 <span id="selected-course">Выберите курс</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="lucide lucide-chevron-down h-4 w-4 opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-[var(--color-font-dark)]" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 opacity-50">
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
 
               <ul id="dropdown-menu"
-                class="absolute left-0 top-full z-10 mt-1 w-full rounded-md border border-gray-300 bg-white shadow-md hidden">
+                class="absolute left-0 top-full z-10 mt-1 w-full rounded-md border border-[var(--color-third)] bg-[var(--color-third)] shadow-md hidden">
                 <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="nails">Маникюр</li>
                 <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="brows">Брови</li>
                 <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer" data-value="eyelashes">Ресницы</li>
@@ -120,53 +141,69 @@
               </select>
             </div>
 
+            <!-- Name input -->
             <div class="space-y-2">
-              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="name">Имя</label>
-              <div>
-                <input id="name" name="name-input" maxlength="50"
-                  class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
-                  placeholder="Введите ваше имя">
-              </div>
+              <input id="name" name="name-input" maxlength="50"
+                class="w-full rounded-md border border-[var(--color-third)] bg-[var(--color-third)] px-3 py-3 shadow-sm"
+                placeholder="Имя">
             </div>
+
+            <!-- Phone input -->
             <div class="space-y-2">
-              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for="phone">Телефон</label>
-              <div class="mb-12">
-                <input type="tel" id="phone" name="phone-input"
-                  class="h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
-                  placeholder="Введите номер телефона">
-              </div>
+              <input type="tel" id="phone" name="phone-input"
+                class=" w-full rounded-md border border-[var(--color-third)] bg-[var(--color-third)] px-3 py-3 shadow-sm"
+                placeholder="Номер телефона">
             </div>
+
+            <!-- Submit button -->
             <button type="submit" name="submit-button"
-              class="rounded-md text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white">Записаться
-              на курс</button>
-          </form>
+              class="h-[48px] rounded-md text-xl tracking-wider uppercase transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-4 py-2 w-full bg-pink-600 hover:bg-pink-700 text-white shadow-sm">Отправить
+            </button>
         </div>
+
+        </form>
       </div>
     </section>
-
     <!-- Footer Section -->
-    <footer class="bg-pink-100 py-8">
+    <footer
+      class="bg-gradient-to-r from-[var(--color-about-from)] to-[var(--color-about-to)] text-[var(--color-text-dark)] py-8 font-inter tracking-wider">
       <div class="container mx-auto px-4">
         <div class="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-          <div class="flex items-center space-x-2 text-pink-800">
-            +1 (555) 123-4567
+          <div class="flex flex-col justify-between items-center">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2 2 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98" />
+              </svg>
+              <div>+1 (555) 123-4567</div>
+            </div>
+            <a href="https://www.google.com/maps?q=пр-т.+Победителей,+115,+Минск" target="_blank"
+              class="flex items-center gap-2 hover:underline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.455 23h1.101l.994-1.242c1.306-1.632 2.881-3.725 4.137-5.891C18.904 13.767 20 11.305 20 9c0-4.605-3.395-8-8-8S4 4.395 4 9c0 2.293 1.063 4.755 2.271 6.867c1.245 2.177 2.82 4.276 4.177 5.916zM6 9c0 2.95 2.386 6.846 4.712 9.9c.41.54.83 1.047 1.225 1.524L12 20.5q.603-.755 1.247-1.611C15.553 15.823 18 11.949 18 9c0-3.5-2.5-6-6-6S6 5.5 6 9"
+                  clip-rule="evenodd" />
+                <circle cx="12" cy="9" r="1" fill="currentColor" />
+                <path fill="currentColor" fill-rule="evenodd" d="M12 11a2 2 0 1 0 0-4a2 2 0 0 0 0 4"
+                  clip-rule="evenodd" />
+              </svg>
+              пр-т. Победителей, 115, Минск
+            </a>
           </div>
           <div class="text-center md:text-left">
-            <p class="text-sm text-pink-700">
+            <p class="text-l">
               © 2025 KOSHKA. Все права защищены.
             </p>
           </div>
           <div class="flex space-x-4">
-            <a href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="#" class="rounded-full bg-white/10 p-4 transition-colors hover:bg-white/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
                 <path fill="currentColor"
                   d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
               </svg>
             </a>
-            <a href="#" class="rounded-full bg-pink-200 p-2 text-pink-800 transition-colors hover:bg-pink-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="#" class="rounded-full bg-white/10 p-4 transition-colors hover:bg-white/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                   <path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5">
                     <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0" />
@@ -192,8 +229,10 @@
     </footer>
   </div>
 
-  <div id="popup" class="fixed inset-0 z-50  items-center justify-center bg-black/60 p-4 hidden">
-    <div class="relative w-full max-w-md animate-in fade-in zoom-in rounded-lg bg-white p-6 shadow-lg">
+  <!-- Popup -->
+  <div id="popup" class="fixed inset-0 z-50  items-center justify-center bg-black/60 p-4 text-[var(--font-dark) hidden">
+    <div
+      class="relative w-full max-w-md animate-in fade-in zoom-in rounded-lg bg-gradient-to-r from-[var(--color-about-from)] to-[var(--color-about-to)] p-6 shadow-lg">
       <!-- <button variant="ghost" size="icon" class="absolute right-2 top-2 text-pink-800 hover:bg-pink-100 rounded-xl">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path fill="currentColor"
@@ -201,16 +240,17 @@
         </svg>
       </button> -->
       <div class="flex flex-col items-center justify-center space-y-4 text-center">
-        <div class="rounded-full bg-green-100 p-3">
+        <div class="rounded-full bg-green-200 p-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-800" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-green-500">Выша заявка принята!</h3>
-        <p class="text-pink-600">Спасибо за заявку! Наши сотрудники свяжутся с вами в ближайшее время.</p>
+        <h3 class="text-2xl font-semibold ]">Выша заявка принята!</h3>
+        <p class="text-l">Спасибо за заявку! Наши сотрудники свяжутся с вами в ближайшее время.
+        </p>
         <button id="popup-close-button" type="button"
-          class="mt-2 bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md">
+          class="mt-2 bg-[var(--color-button)] hover:bg-pink-700 text-white px-4 py-2 rounded-md uppercase tracking-wider">
           Закрыть
         </button>
       </div>
