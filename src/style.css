@@ -20,3 +20,20 @@
   --color-brown-dark: #4a2625;
   --color-brown-light: #6c5e53;
 }
+
+.about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg-about.png');
+  background-repeat: repeat;
+  background-size: contain;
+  opacity: 0.2; /* степень прозрачности */
+  filter: brightness(0.9) contrast(0.9); /* можно настроить по вкусу */
+  z-index: 0;
+  pointer-events: none;
+}
+.about > .container {
+  position: relative;
+  z-index: 1;
+}
